@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+  
+    </div>
+    <div class="col-sm">
+      	{% for customer in customers %}
+
+	<a href="http://127.0.0.1:5000/{{customer.customer_id}}/" type="button" class="btn btn-primary btn-sm">{{customer.last_name}} {{customer.phone}} {{customer.email}} </a>
+	<br>
+
+      {% endfor %}
+      <a href="http://127.0.0.1:5000/customers/add/" type="button" class="btn btn-dark">Add New Contact</a>
+
+    </div>
+    <div class="col-sm">
+
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}
+
